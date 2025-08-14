@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Horário - Professor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1><i class="fas fa-chalkboard-teacher"></i> Consulta de Horário</h1>
+            <p>Selecione seu nome para visualizar seu horário</p>
+        </header>
+
+        <!-- Seção de seleção -->
+        <section class="professor-select-section">
+            <div class="form-group">
+                <label for="professor-select">Selecione seu nome:</label>
+                <select id="professor-select" class="form-control">
+                    <option value="">-- Carregando professores --</option>
+                </select>
+            </div>
+            <button id="btn-consultar" class="btn btn-primary">
+                <i class="fas fa-search"></i> Consultar Horário
+            </button>
+        </section>
+
+        <!-- Grade de horários -->
+        <section id="horario-container" class="horario-container" style="display: none;">
+            <h2 id="professor-nome-titulo"></h2>
+            <div id="horarios-grid" class="horarios-grid"></div>
+            
+            <div class="print-actions">
+                <button id="btn-print-horario" class="btn btn-secondary">
+                    <i class="fas fa-print"></i> Imprimir Horário
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/professor.js"></script> <!-- Novo arquivo específico para esta página -->
+</body>
+</html>
